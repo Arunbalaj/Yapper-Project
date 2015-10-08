@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Edit Configuration</title>
+        <meta charset="utf-8">
+         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/Stylehead.css"/>
+        <script src="scripts/functionsproyapps.js"></script>
+         <script src="https://code.angularjs.org/angular-1.0.1.min.js"></script>
+       <link rel="stylesheet" href="scripts/jqGrid/customTheme/jquery-ui.css" type="text/css" media="all" />	
+	<script src="scripts/jqGrid/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="scripts/jqGrid/js/i18n/grid.locale-en.js" type="text/javascript"></script>
+	<script src="scripts/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+   
+   </head>
+
+    <body>
+    <h4 align ="center">Edit Configuration value</h4>
+    <div id="display">
+    </div>
+<form class="loginScreen">
+    <input type="hidden" id ="parameterid" name="parameterid" value""><br>
+
+	Parameter Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" id ="parname" name="parname" value"" readonly="readonly" style="color: #787878;"><br>
+	
+	Parameter Value:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" id ="ParameterValue" name="ParameterValue" value""><br><br>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="button" value="Edit Configuration" id="tblconfigset"/>
+<input type="button" value="Cancel" onclick="window.close()"/>
+      
+</form>
+     </body>
+
+ </html>  

@@ -1,0 +1,61 @@
+<html>
+<head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery_cookie/src/jquery.cookie.js">	</script>
+		<script type="text/javascript" src="scripts/functions_login.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		
+		<font color="orange">
+		<h2 align="center"> YAPPER </h2>
+		</font>
+	</head>
+
+	<body> 
+		<div id="first">
+			<form class="loginScreen">
+				<p id="emailSent"></p>
+				<div><label>Email<span style="color:red;">&#42;</span></div>
+				<input type = "text" id = "email" size = "34" placeholder = "name@address.com" autofocus required/>
+				</label>
+				<font color="red" id="login_error"></font></p>
+				<div><label>Password<span style="color:red;">&#42;</span></div> 
+				<input type="password" size="34" id="password"/>
+				</p>
+				</p>
+				<font color="red" id="login_perror"></font></p>
+				<p>
+					<input id = "rememberMe" type = "checkbox"
+					value = ""></label>
+					<label>RememberMe</label>
+				</p>
+				<p>
+				<input type="submit" value="Login" id="login"/>
+				<input type = "reset" value = "Reset">
+				<p id="two"><a href="#" id="forgotPwd" class="forgotPwd">Forgot Password?</a></p>		
+				
+			</form>
+		</div>
+		
+		<div id="second">
+			<form class="fPwd">
+					<div class="text-title Ggrey">Forgot Password?</div>
+					<br/>
+					<div class="data-content" >Please enter the email address you signed up with when you created your account, and we will send a password reset email to you.</div>
+						<br>
+						<div><label>Email
+						<input type = "text" id ="forgotEmail" size = "34" placeholder = "name@address.com"/>
+						</label>
+					</div>
+					<font color="red" id="ferror"></font></p>
+	
+					<button id="sendEmail">Submit</button>
+					<p id="two"><a href="#" id="backtoLogin" class="backtoLogin">Back to Log in</a></p>		
+					
+				</div>
+			</form>
+		</div>
+		
+	</body>
+</html>

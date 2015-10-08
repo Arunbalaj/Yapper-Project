@@ -1,0 +1,378 @@
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+			<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	 	<link rel="stylesheet" type="text/css" href="css/Stylehead.css"/>
+	   <script src="scripts/functionsproyapps.js"></script>
+       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+      <link rel="stylesheet" href="scripts/jqGrid/customTheme/jquery-ui.css" type="text/css" media="all" />	
+ <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+<link href="css/css/footable.core.css" rel="stylesheet" type="text/css"/>
+<link href="css/css/footable.standalone.min.css" rel="stylesheet" type="text/css"/>
+	 
+<style>
+div.ui-datepicker{
+ font-size:13px;
+}
+
+
+
+</style>
+
+    <script>
+        if (!window.jQuery) { document.write('<script src="scripts/js/jquery-1.9.1.min.js"><\/script>'); }
+    </script>
+    <script src="scripts/js/footable.js" type="text/javascript"></script>
+	<script src="scripts/js/footable.paginate.js" type="text/javascript"></script>
+	<script src="scripts/js/footable.sort.js" type="text/javascript"></script>
+	<script src="scripts/js/footable.filter.js" type="text/javascript"></script>
+ <script>
+  webshims.setOptions('waitReady', false);
+  webshims.setOptions('forms-ext', {types: 'date'});
+  webshims.polyfill('forms forms-ext');
+  webshim.setOptions("forms-ext", {
+		"widgets": {
+			"startView": 2,
+			"minView": 2,
+			"openOnMouseFocus": true,
+			"popover": {
+				"appendTo": "element"
+			},
+			"classes": "show-uparrow show-selectnav"
+		}
+	});
+</script> 
+ 
+ 
+   
+<script> 
+
+$(function(){
+  $("#header").load("header.html"); 
+  $("#footer").load("footer.html"); 
+  //document.getElementById("file").addEventListener("change", function() {
+	//  document.getElementById("upload_button").submit();
+	 
+  
+});
+</script> 
+  <link rel="stylesheet" href="scripts/jqGrid/customTheme/jquery-ui.css" type="text/css" media="all" />	
+ 
+
+	
+
+        
+	 
+<style>
+div.ui-datepicker{
+ font-size:13px;
+}
+
+</style>
+	
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+
+function getlon(){
+	
+var geocoder = new google.maps.Geocoder();
+var State= $("#region").val();
+var city= $("#city").val();
+
+var addr= $("#addre").val();
+var address = addr+","+city+","+State;
+console.log("Coordinates for "+address);
+geocoder.geocode( { 'address': address}, function(results, status) {
+
+  if (status == google.maps.GeocoderStatus.OK) {
+    var latitude = results[0].geometry.location.lat();
+    var longitude = results[0].geometry.location.lng();
+ 
+  
+ $("#latitude").val(latitude);
+ $("#longitude").val(longitude);
+  } 
+}); 
+}
+
+
+
+</script>
+ 
+ 
+<script>
+  $(function() {
+	  $( "#startdate" ).datepicker({
+	     
+	      changeMonth: true,
+	      changeYear: true,
+	      showOn: 'both',
+	      showButtonPanel: true,
+	    
+	     
+	      
+	    });
+	    $( "#enddate" ).datepicker({
+	    	changeMonth: true,
+		      changeYear: true,
+		      showOn: 'both',
+		      showButtonPanel: true
+	    
+	    });
+	    
+  });
+  </script>
+	
+</head>
+<body>	 
+
+
+<div id="header" align="right">
+
+</div>
+<br>
+<div id="headerlink">
+	
+			<a href="index.html" class="headerr">Home</a> /
+			
+		<a href="permanentYapps.html" class="headeact">Permanent Yapps</a>
+		
+		
+
+    </div>
+<br>
+<br>
+
+		<div id="form">
+		
+	<div id="outerContainer2" >
+  Permanent Yapp Creator:
+  </div>
+<div id="mainporyy">
+
+	
+		<label for="name">Name :<span style="color:red;">&#42;</span></label>
+		<input type="text" id="name" name="name" value="" style="width:150px;"> 
+                                        <label for="startdate">Start date:<span style="color:red;">&#42;</span></label>
+                                        <input type="text" style="width:130px;" id="startdate" name="startdate"  placeholder="mm/dd/yyyy" >
+         <label for="initialmessage">Initial Message:</label> 
+         <input type="text" name="initialmessage" id="initialmessage" value="">&nbsp;&nbsp; Fields marked   
+         <br>
+		<label for="region">State &nbsp&nbsp&nbsp:&nbsp&nbsp</label>
+		<select id="region" name="select" style="width:150px;">
+		<option value=""></option>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+	</select>				
+	
+			  
+		<label for="enddate">&nbsp;End Date:<span style="color:red;">&#42;</span></label> 
+		<input type="text" style="width:130px;" id="enddate" name="endDate" value=""  placeholder="mm/dd/yyyy" >
+		<label for="cate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Categories :</label>
+		<input type="text" id="cate" name="cate" value="" >  with <span style="color:red;">&#42;</span> are mandatory
+		  <br><br>
+ 
+			<label for="city">
+	&nbsp&nbsp&nbspCity :&nbsp&nbsp</label>
+		<input type="text" id="city" style="width:150px;" name="city">&nbsp&nbsp
+				<label for="addr">
+	Address :</label>
+		<input type="text" id="addre" style="width:150px;" name="addre">&nbsp&nbsp
+   <input type="button" value="Get Lat/Long" onclick="getlon()"/>  
+  
+ &nbspUpload Logo: <input id="imaaa" name="imaaa" size="27" type="file" accept="image/*"/>&nbsp&nbsp
+  
+<br><br>
+        
+		<label for="radius">Radius:<span style="color:red;">&#42;</span></label>
+		 <input type="text" name="radius" id="radius" value="" style="width:150px;"> 
+		
+   	    
+        
+     <label for="latitude">&nbsp;Latitude:<span style="color:red;">&#42;</span></label>
+                                  <input type="text" name="latitude" id="latitude" value=""> 
+
+<label for="longitude">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Longitude:<span style="color:red;">&#42;</span></label>
+       <input type="text" name="longitude" style="width:150px;" id="longitude" value="">
+
+ <input type="button" value="Add" id="submityapp"/> 
+ 
+ 		
+ </div>
+		</div>
+			
+
+<br>
+<hr>
+
+<br>
+<div id="outerContainer2" >
+  Permanent Yapp Editor:
+  </div>
+  
+<div id="container3" >
+
+<br>
+
+	<div id="db_two">
+<form class="pmainpor11">
+
+			State : <select id="regnpro">
+			<option value="">All</option>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+	</select>				
+			
+	
+		Start_date :<input type="date" id="craetedpro" name="craeted" placeholder="yyyy-mm-dd" >
+       	
+		End_Date: <input type="date" id="expirepro" name="expire" value="" placeholder="yyyy-mm-dd" > 
+       
+		
+		City:<input type="text" id="citpro" name="cit" > 
+        
+<!-- Id:<input type="text" id="id" name="city"> -->
+ 
+		<input type="button" value="View" id="viewallyapp"/>  
+		
+		<input type="button" value="Email Excel report" id="excelpermyapp"/>  
+		
+	
+	<br>	<br>
+</form></div>
+<div style="margin-left:73%" >
+<input type="text" id="filterpe" placeholder="Search" style="border: 1px solid #848484; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    padding:5px;
+    padding-left: 25px;
+    background: #F7F778 url(Images/search.png) no-repeat 4px 4px;" />
+    <input type="button" value="Clear" id="clear-filterpe" />
+</div>
+<br>
+<div id="db_tabeve2" >
+<table id="tblList2" class="foodisplay2" data-limit-navigation="10" data-filter="#filterpe"  >
+
+	</table>
+	
+
+    
+   
+	
+</div>
+  
+
+<br>
+<br>
+</div>	
+
+
+
+</body>
+<br><br><br>
+<div id="footer" align="center"></div>
+</html>

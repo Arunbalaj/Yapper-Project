@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/Stylehead.css"/>
+       <script src="scripts/functionsproyapps.js"></script>
+ <script> 
+$(function(){
+  $("#header").load("header.html"); 
+  $("#footer").load("footer.html"); 
+});
+</script> 
+
+</head>
+<body>
+<div id="header" align="center"></div>
+<br>
+<br>
+<form class="loginScreen">
+	<div id="mainport" >
+
+		<div id="form">
+		
+		Enter Yapp Id: <input type="text" id="id" name="viewid" value="">&nbsp 
+
+		<input type="button" value="view" id="viewyapp"/>&nbsp &nbsp &nbsp
+	<br>   
+	<h3>Update details here</h3>
+	<table id="results">
+Yapp Id <input type="text" id ="yappid" name="yappid" readonly="readonly" value"">
+<br>
+Name<input type="text" id ="yappname" name="yappcty" value"">
+<br>
+Yapp Des <input type="text" id ="yappdes" name="yappdes" value"">
+<br>
+End date<input type="text" id ="dateex1" name="dateex1" value"">(dd/mm/yyyy)
+<br>
+Latitude<input type="text" id ="yapplat" name="yapplat" value"">
+<br>
+Longitude<input type="text" id ="yapplong" name="yapplong"  value"">
+<br>
+Distance Limit<input type="text" id ="yappdist" name="yappdist"  value"">
+<br>
+Region<input type="text" id ="yappreg" name="yappreg" value"">
+<br>
+City<input type="text" id ="yappcty" name="yappcty" value"">
+<br>
+Genre<input type="text" id ="yappgnr" name="yappgnr" value"">
+<br>
+Type<input type="text" id ="type" name="type" value"">
+<br>
+User ID<input type="text" id ="iduser" name="iduser" value"">
+<br>
+
+
+<input type="button" value="update" id="updateyapp"/>
+
+
+	</table>
+</div>
+</div>
+</form>
+</body>
+<div id="footer" align="center"></div>
+</html>

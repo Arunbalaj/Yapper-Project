@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/all_functions.js"></script>
+	<script type = "text/javascript">
+</script>
+<font color="orange">
+<h2 align="center"> Add/Edit Admin </h2>
+</font>
+</head>
+
+<body>
+	<form class="AOE" accept-charset="utf-8" method = "post" autocomplete="on" action=" ">
+		
+		<p><div><label>*First Name:
+		<input type = "text" id = "AOEfName"
+		placeholder = "First name" autofocus required/>
+		</label>
+		</p></div>
+		<div><font color="red" id="AOEnameError"></font><div>
+		
+		<p><div><label>*Last Name:
+		<input type = "text" id = "AOElName"
+		placeholder = "Last name" required/>
+		</label></p></div>
+		<div><font color="red" id="AOElnameError"></font><div>
+		
+		
+		<p><div><label>Phone Number:
+		<input type = "text" id = "AOEphone" size = "16" placeholder = "1-222-222-2222"/>
+		</label></div>
+		<font color="red" id="AOEphoneError"></font></p>
+		
+		<p><div><label>*Email
+		<input type = "text" id = "AOEemail" size = "25" placeholder = "name@address.com" required/>
+		</label></div>
+		<font color="red" id="AOEemailError"></font></p>
+		
+		<p><div id="AOEType">Type
+				<select>
+				  <option value="SUPER_ADMIN">SUPERADMIN</option>
+				  <option value="ADMIN">ADMIN</option>
+				</select>
+		</div>
+		</p>	
+		<p>
+		<div class=buttons>
+		<button id="AOEupdate">Update</button>
+		<button id="AOEcancel"> Cancel </button>
+	</div>
+			<font color="red" id="AddFailError"></font></p>
+	
+	
+</p>
+		</form>
+	</form>
+</body>
+</html>

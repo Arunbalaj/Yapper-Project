@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Config Report</title>
+        <meta charset="utf-8"><meta charset="utf-8">
+         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/Stylehead.css"/>
+        
+       <link rel="stylesheet" href="scripts/jqGrid/customTheme/jquery-ui.css" type="text/css" media="all" />	
+ <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/Stylehead.css"/>
+        <script src="scripts/functionscharts.js"></script>
+        
+	 
+<style>
+div.ui-datepicker{
+ font-size:13px;
+}
+
+</style>
+	
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+ 
+<script>
+  $(function() {
+	  $( "#ctjn" ).datepicker({
+		     
+	      changeMonth: true,
+	      changeYear: true,
+	      showOn: 'both',
+	      showButtonPanel: true,
+	      
+	      onClose: function( selectedDate ) {
+	        $( "#ctrpt" ).datepicker( "option", "minDate", selectedDate );
+	      }
+	    });
+	    $( "#ctrpt" ).datepicker({
+	    	changeMonth: true,
+		      changeYear: true,
+		      showOn: 'both',
+		      showButtonPanel: true,
+		     onClose: function( selectedDate ) {
+	        $( "#ctjn" ).datepicker( "option", "maxDate", selectedDate );
+	      }
+	    });
+	    
+  });
+  </script>
+   
+   </head>
+
+    <body>
+
+        
+<form class="Popupyapper">
+
+	<br>   
+<h3>Config Daily Users  </h3>
+	<table id="results">
+<input type="hidden" id ="typey" name="typey" readonly="readonly" value"">
+<br>
+
+
+State:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select id="ctrgn" style="width:166px;">
+			<option value="">All</option>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+	</select>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFrom:<span style="color:red;">&#42;</span>&nbsp&nbsp&nbsp<input type="text" id ="ctjn" name="daujn" value"" placeholder="mm/dd/yy" style="width:150px;" >
+<br>
+City:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" style="width:166px;" id ="ctcty" name="daucty"  value"">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTo:<span style="color:red;">&#42;</span>&nbsp&nbsp&nbsp&nbsp<input type="text" id ="ctrpt" placeholder="mm/dd/yy" style="width:150px;" name="daurpt" value"">
+<br>
+Country:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id ="ctloc" style="width:166px;" name="dauloc"  value"">
+&nbsp&nbspChat Type:&nbsp<select id="ctctype" style="width:150px;">
+			<option value="">All</option>
+	<option value="PERMANENT">Permanent</option>
+	<option value="EVENT">Event</option>
+	<option value="PUBLIC">Public</option>
+
+	</select><br>
+Zip code:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id ="ctzc"  style="width:166px;"  name="dauzc" value"">
+
+
+
+
+
+
+<hr>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ 
+ <input type="button" value="Cancel" onclick="window.close()"/>
+<input type="button" value="OK" onclick="upchat()"  />
+
+      
+</table>
+</form>
+
+     </body>
+
+ </html>  

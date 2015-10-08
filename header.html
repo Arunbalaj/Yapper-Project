@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yapper Admin Portal</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+		<link href="css/Stylefrhead.css" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	   
+       
+       <script type="text/javascript">
+$(document).ready(function() {
+    $('#body').show();
+    $('#msg').hide();
+});
+</script>
+       <script> 
+       
+       function getOpenBaseUrl(){
+           return getHost() + "/yapper/v1/open/";
+         }
+
+         function getAuthBaseUrl(){
+           return getHost() + "/yapper/v1/auth/";
+         }
+
+         function getHostFull(){
+           return getHost() + "/yapper/";
+         }
+
+         function getHost(){
+         
+           var p = location.href;
+           var indexStart = 0;
+           var indexEnd1 = p.indexOf('//', indexStart);
+           var indexEnd2 = p.indexOf('/', indexEnd1 + 2);
+           var result = null;
+           if (indexEnd2 != -1) result = p.substring(indexStart, indexEnd2);
+           else result = p.substring(indexStart);
+           return result;
+         }
+         var currentPath = window.location.pathname;
+       var currentPage = (currentPath).substring(currentPath.lastIndexOf('/') + 1); 
+
+       if(currentPage == "index.html")
+         {
+    
+    	   $('a.index').removeClass('index').addClass('home2');
+    	   
+         }
+       if(currentPage == "Admin.html")
+       {
+
+  	   $('a.admin').removeClass('admin').addClass('home2');
+  	   
+       }
+       if(currentPage == "config.html"||currentPage == "reset_Password.html")
+       {
+  
+  	   $('a.config').removeClass('config').addClass('home2');
+  	   
+       }
+       if(currentPage == "eventyapp.html")
+       {
+  	 
+  	   $('a.eveyapp').removeClass('eveyapp').addClass('home2');
+  	   
+       }
+       if(currentPage == "permanentYapps.html")
+       {
+  	  
+  	   $('a.promotyapp').removeClass('promotyapp').addClass('home2');
+  	   
+       }
+       if(currentPage == "user.html")
+       {
+  	   
+  	   $('a.user').removeClass('user').addClass('home2');
+  	   
+       }
+       if(currentPage == "publicyapps.html")
+       {
+  	 
+  	   $('a.publicyapp').removeClass('publicyapp').addClass('home2');
+  	   
+       }
+       if(currentPage == "install.html")
+       {
+
+  	   $('a.install').removeClass('install').addClass('home2');
+  	   
+       }
+       function APIGetTextCall(url,success,failure){
+    	    $.ajax({
+    	      url : url,
+    	      type : "GET",
+    	      data : null,
+    	      dataType : "text",
+    	      statusCode : null,
+    	      async : false,
+    	      cache:false,
+    	      success : success,
+    	      error : failure
+    	    });
+    	  }
+       
+       function logout()
+   		{
+    	 
+    	   sessionStorage.removeItem('userid');
+   			sessionStorage.removeItem('useremail');
+   			var url1= getAuthBaseUrl() + "logout";
+   	 APIGetTextCall(url1,function(data, textStatus){
+   	    location.assign("login.html");
+   		    },
+   		    function(jqXHR, textStatus, errorThrown){
+   		      console.log('fail to logout');
+   		     // alert('Insert Failure:'+errorThrown);
+   		    }
+   		      
+   		      );
+   			
+   		
+   			}
+       
+     
+   	 </script>
+	</head>
+	<body>
+	<form class="head">	
+		<nav>
+	
+			<a href="index.html" class="index" >Home</a>
+			<a href="user.html" class="user" >Users</a>
+			<a href="install.html" class="install" >Install</a>
+			<a href="publicyapps.html" class="publicyapp" ng-click="'home'">Public Yapps</a>
+			
+		<a href="permanentYapps.html" class="promotyapp" ng-click="'home'">Permanent Yapps</a>
+		
+			<a href="eventyapp.html" class="eveyapp" ng-click="'home'">Event Yapps</a>
+			<div id="nav" align="center">
+    <div id="nav_wrapper" >
+        <ul>
+           
+            
+            <li> <a href="#" class="config" ng-click="'home'">Configuration</a>
+
+                <ul>
+                    <li><a href="config.html" class="home">View Configuration</a>
+                    </li>
+                    <li><a href="reset_Password.html" class="home">Reset Password</a>
+                    </li>
+                </ul>
+            </li>               
+            
+        </ul>
+
+    </div>
+   
+</div>
+			
+		<a href="Admin.html" class="admin" ng-click="'home'">Admin</a>
+		<a href="#" class="logout" onclick="logout();" ng-click="'home'">Logout</a>
+		</nav>
+		</form>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	</body>
+</html>

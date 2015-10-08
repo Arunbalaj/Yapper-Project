@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Stylehead.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/all_functions.js">	</script>
+	
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    <script src="https://code.angularjs.org/angular-1.0.1.min.js"></script>
+
+	<link rel="stylesheet" href="scripts/jqGrid/customTheme/jquery-ui.css" type="text/css" media="all" />	
+	  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.3/css/jquery.dataTables.css"/>
+       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+        
+             
+   <script src="https://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+ <script src="//cdn.datatables.net/plug-ins/9dcbecd42ad/api/fnStandingRedraw.js"></script>
+
+
+<script> 
+$(function(){
+  $("#header").load("header.html"); 
+   $("#footer").load("footer.html");
+});
+</script> 
+ 
+<link href="css/css/footable.core.css" rel="stylesheet" type="text/css"/>
+<link href="css/css/footable.standalone.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        if (!window.jQuery) { document.write('<script src="scripts/js/jquery-1.9.1.min.js"><\/script>'); }
+    </script>
+    <script src="scripts/js/footable.js" type="text/javascript"></script>
+	<script src="scripts/js/footable.paginate.js" type="text/javascript"></script>
+	<script src="scripts/js/footable.sort.js" type="text/javascript"></script>
+	<script src="scripts/js/footable.filter.js" type="text/javascript"></script>
+
+
+
+</head>
+<body id="CRUDBody">
+	<div id="header" align="center"></div>
+		
+		<div id="headerlink">
+			<a href="index.html" class="headerr">Home</a>/ 
+			<a href="Admin.html" class="headeact">Admin</a>
+    	</div>
+		<br>
+		<br>
+	 
+	<!-- 	  button id="editAdmin">Edit Admin</button>	
+		<p><table id="CRUDGrid"><tr><td></td></tr></table> </p>-->
+		<br><div style="margin-left:73%" >
+<input type="text" id="filterad" placeholder="Search" style="border: 1px solid #848484; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    outline:0; 
+    padding:5px;
+    padding-left: 25px;
+    background: #F7F778 url(Images/search.png) no-repeat 4px 4px;" />
+     <input type="button" value="Clear" id="clear-filterad" />
+</div>
+<br>
+
+
+		<div id="one">
+		
+		<table id="tblList" class="foodisplay"  data-limit-navigation="10" data-filter="#filterad">
+	</table>
+		</div>
+	<p>
+	<div style="float:left; margin-left:35px ;">
+	<button class='CRUDDelete' id="CRUDDelete" align="left" style="padding: 10px 20px ;">Delete</button>
+	</div>
+  <div style="float: right; margin-right:35px ;">
+	<button id="addAdmin" align="right" style="padding: 10px 20px ;">Add Admin</button>
+	</div>
+	</p>				
+	
+					
+		
+</body>
+<br>
+<br>
+<br><br>
+<br>
+
+<div id="footer" align="center"></div>
+</html>
